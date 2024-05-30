@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Mockup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              grayishblue: {
+                300: "#DFE6F1",
+                200: "#EDF2FA",
+                100: "#F6FAFF",
+                600: "#9BA7BA",
+              },
+              brand_black: {
+                1000: "#525252",
+                200: "#F2F2F2",
+              },
+            },
+          },
+        },
+        variants: {},
+        plugins: [],
+      };
+    </script>
+  </head>
+  <body class="mx-10 pb-32 pt-10">
+    <div class="border-grayishblue-300 flex rounded-lg border">
+      <!-- First Section -->
+      <div
+        class="bg-grayishblue-200 flex w-16 items-center justify-center rounded-l-lg"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          class="text-grayishblue-600"
+        >
+          <path
+            d="M8 14.35C11.507 14.35 14.35 11.507 14.35 8.00002C14.35 4.49302 11.507 1.65002 8 1.65002C4.49299 1.65002 1.65 4.49302 1.65 8.00002C1.65 11.507 4.49299 14.35 8 14.35ZM8.75 6.74579C8.75 7.16 8.41421 7.49579 8 7.49579L7.5 7.49597V9.16577H8.5V8.42332C9.22287 8.20818 9.75 7.53854 9.75 6.74579C9.75 5.77929 8.9665 4.99579 8 4.99579C7.0335 4.99579 6.25 5.77929 6.25 6.74579H7.25C7.25 6.33157 7.58579 5.99579 8 5.99579C8.41421 5.99579 8.75 6.33157 8.75 6.74579ZM8 11.0037C8.34242 11.0037 8.62 10.7261 8.62 10.3837C8.62 10.0413 8.34242 9.76373 8 9.76373C7.65759 9.76373 7.38 10.0413 7.38 10.3837C7.38 10.7261 7.65759 11.0037 8 11.0037Z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            opacity="1"
+          ></path>
+        </svg>
+      </div>
+
+      <!-- Second Section -->
+      <div
+        class="bg-grayishblue-100 flex flex-1 items-center justify-between rounded-r-lg p-4"
+      >
+        <!-- Left Section -->
+        <div class="text-sm">
+          카카오톡 채널 친구인 고객에게 카카오톡으로 타겟팅 메시지를 발송해
+          구매전환율을 높이는 캠페인입니다.
+        </div>
+
+        <!-- Right Section -->
+        <div class="group relative flex items-center space-x-1">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="text-brand_black-1000"
+          >
+            <path
+              d="M13.35 8.00002C13.35 10.9547 10.9547 13.35 8 13.35C5.04528 13.35 2.65 10.9547 2.65 8.00002C2.65 5.0453 5.04528 2.65002 8 2.65002C10.9547 2.65002 13.35 5.0453 13.35 8.00002ZM14.35 8.00002C14.35 11.507 11.507 14.35 8 14.35C4.49299 14.35 1.65 11.507 1.65 8.00002C1.65 4.49302 4.49299 1.65002 8 1.65002C11.507 1.65002 14.35 4.49302 14.35 8.00002ZM8 7.49579C8.41421 7.49579 8.75 7.16 8.75 6.74579C8.75 6.33157 8.41421 5.99579 8 5.99579C7.58579 5.99579 7.25 6.33157 7.25 6.74579H6.25C6.25 5.77929 7.0335 4.99579 8 4.99579C8.9665 4.99579 9.75 5.77929 9.75 6.74579C9.75 7.53854 9.22287 8.20818 8.5 8.42332V9.16577H7.5V7.49597L8 7.49579ZM8.62 10.3837C8.62 10.7261 8.34242 11.0037 8 11.0037C7.65759 11.0037 7.38 10.7261 7.38 10.3837C7.38 10.0413 7.65759 9.76373 8 9.76373C8.34242 9.76373 8.62 10.0413 8.62 10.3837Z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              opacity="1"
+            ></path>
+          </svg>
+          <span class="text-xs">구매전환율이란?</span>
+          <div
+            class="absolute bottom-full right-0 mb-2 hidden w-64 rounded-md bg-black p-2 text-xs text-white group-hover:block"
+          >
+            메시지를 받고 24시간 이내에 방문한 고객이 24시간 이내에 구매한
+            고객수 / 발송수입니다.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-brand_black-200 flex w-max items-center rounded-full p-1">
+      <button
+        id="button1"
+        class="toggle-button h-9 w-[60px] rounded-full bg-white text-black"
+        onclick="toggle(1)"
+      >
+        1일
+      </button>
+      <button
+        id="button2"
+        class="toggle-button h-9 w-[60px] rounded-full text-gray-500"
+        onclick="toggle(2)"
+      >
+        7일
+      </button>
+      <button
+        id="button3"
+        class="toggle-button h-9 w-[60px] rounded-full text-gray-500"
+        onclick="toggle(3)"
+      >
+        30일
+      </button>
+    </div>
+
+    <script>
+      function toggle(buttonNumber) {
+        document.querySelectorAll(".toggle-button").forEach((button) => {
+          button.classList.remove("bg-white", "text-black");
+          button.classList.add("text-gray-500");
+        });
+        const activeButton = document.getElementById(`button${buttonNumber}`);
+        activeButton.classList.add("bg-white", "text-black");
+        activeButton.classList.remove("text-gray-500");
+      }
+    </script>
+  </body>
+</html>
