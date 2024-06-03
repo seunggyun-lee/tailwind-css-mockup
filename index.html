@@ -26,6 +26,9 @@
                 1000: "#525252",
                 200: "#F2F2F2",
               },
+              brand_gray: {
+                100: "#F3F7F6",
+              },
             },
           },
         },
@@ -34,9 +37,9 @@
       };
     </script>
   </head>
-  <body class="mx-10 pb-32 pt-10">
+  <body class="mx-10 flex-col pb-32 pt-10">
+    <!-- infobox -->
     <div class="border-grayishblue-300 flex rounded-lg border">
-      <!-- First Section -->
       <div
         class="bg-grayishblue-200 flex w-16 items-center justify-center rounded-l-lg"
       >
@@ -55,18 +58,13 @@
           ></path>
         </svg>
       </div>
-
-      <!-- Second Section -->
       <div
         class="bg-grayishblue-100 flex flex-1 items-center justify-between rounded-r-lg p-4"
       >
-        <!-- Left Section -->
         <div class="text-sm">
           카카오톡 채널 친구인 고객에게 카카오톡으로 타겟팅 메시지를 발송해
           구매전환율을 높이는 캠페인입니다.
         </div>
-
-        <!-- Right Section -->
         <div class="group relative flex items-center space-x-1">
           <svg
             width="14"
@@ -92,29 +90,222 @@
         </div>
       </div>
     </div>
+    <div class="mt-8 flex items-center justify-between">
+      <p class="text-xl font-semibold">친구톡 캠페인 현황</p>
+      <div class="bg-brand_black-200 flex w-max items-center rounded-full p-1">
+        <button
+          id="button1"
+          class="toggle-button h-9 w-[60px] rounded-full bg-white text-black"
+          onclick="toggle(1)"
+        >
+          1일
+        </button>
+        <button
+          id="button2"
+          class="toggle-button h-9 w-[60px] rounded-full text-gray-500"
+          onclick="toggle(2)"
+        >
+          7일
+        </button>
+        <button
+          id="button3"
+          class="toggle-button h-9 w-[60px] rounded-full text-gray-500"
+          onclick="toggle(3)"
+        >
+          30일
+        </button>
+      </div>
+    </div>
+    <div class="mt-5 flex gap-5">
+      <!-- Card 1 -->
+      <div
+        class="bg-brand_gray-100 flex flex-1 items-center rounded-lg p-6 shadow-md"
+      >
+        <div class="mr-4">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 16 16"
+            fill="var(--brand_gray_900)"
+            xmlns="http://www.w3.org/2000/svg"
+            style="color: var(--brand_gray_900)"
+          >
+            <path
+              d="M13.5303 2.00061C13.4453 2.00561 13.3553 2.02061 13.2603 2.05561L7.79025 4.03061L2.02525 6.11561C1.56525 6.28061 1.44525 6.89561 1.83025 7.11061L6.51025 9.75061L9.15525 14.4306C9.24525 14.5956 9.41025 14.6656 9.58025 14.6606C9.81025 14.6506 10.0553 14.5006 10.1503 14.2356L12.2353 8.47061L14.2153 2.99561C14.4053 2.45561 14.0403 1.98061 13.5303 2.00061ZM11.2903 8.13561L9.51525 13.0456L7.49525 9.47561L9.70025 7.27061L8.99525 6.56561L6.79025 8.77061L3.21525 6.75561L8.12525 4.98061L13.0753 3.19061L11.2903 8.13561Z"
+              fill="currentColor"
+              opacity="1"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <div class="text-sm text-gray-500">총 발송수</div>
+          <div class="text-2xl font-bold">13,688</div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div
+        class="bg-brand_gray-100 flex flex-1 items-center rounded-lg p-6 shadow-md"
+      >
+        <div class="mr-4">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 16 16"
+            fill="var(--brand_gray_900)"
+            xmlns="http://www.w3.org/2000/svg"
+            style="color: var(--brand_gray_900)"
+          >
+            <path
+              d="M12.3076 12.543L6.30963 13.3554L6.30566 13.3292V2.67079L6.30963 2.64458L12.3076 3.45701V12.543ZM6.44386 1.65363C5.89245 1.57894 5.39681 1.96678 5.31995 2.5H3.69238C3.1401 2.5 2.69238 2.94771 2.69238 3.5V12.5C2.69238 13.0523 3.1401 13.5 3.69238 13.5H5.31995C5.39681 14.0332 5.89245 14.4211 6.44386 14.3464L12.4418 13.5339C12.9377 13.4668 13.3076 13.0434 13.3076 12.543V3.45701C13.3076 2.9566 12.9377 2.53323 12.4418 2.46606L6.44386 1.65363ZM3.69238 12.5H5.30566V3.5H3.69238V12.5ZM7.53476 7.30328C7.67273 7.21214 7.83461 7.164 7.99997 7.16499C8.22056 7.16631 8.43167 7.25487 8.58719 7.41132C8.7427 7.56777 8.82999 7.77939 8.82999 7.99998C8.82998 8.16534 8.78091 8.32698 8.68893 8.4644C8.59696 8.60182 8.46625 8.70885 8.31338 8.7719C8.16052 8.83495 7.99234 8.85118 7.83023 8.81856C7.66812 8.78593 7.51938 8.70592 7.4028 8.58864C7.28623 8.47136 7.2071 8.32211 7.17544 8.15981C7.14379 7.9975 7.16104 7.82946 7.22501 7.67697C7.28897 7.52448 7.39679 7.39443 7.53476 7.30328Z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              fill="currentColor"
+              opacity="1"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <div class="text-sm text-gray-500">평균 방문율</div>
+          <div class="text-2xl font-bold">18.64%</div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div
+        class="bg-brand_gray-100 flex flex-1 items-center rounded-lg p-6 shadow-md"
+      >
+        <div class="mr-4">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 16 16"
+            fill="var(--brand_gray_900)"
+            xmlns="http://www.w3.org/2000/svg"
+            style="color: var(--brand_gray_900)"
+          >
+            <path
+              d="M13.045 9.63499V4.03C13.045 3.64232 12.8913 3.27045 12.6177 2.99585C12.344 2.72125 11.9727 2.56633 11.585 2.565H2.21997C1.8323 2.56633 1.46098 2.72125 1.18732 2.99585C0.913657 3.27045 0.760008 3.64232 0.76001 4.03V9.63C0.76001 9.82173 0.797783 10.0116 0.871155 10.1887C0.944527 10.3659 1.05205 10.5268 1.18762 10.6624C1.3232 10.7979 1.48412 10.9055 1.66125 10.9789C1.83839 11.0522 2.02824 11.09 2.21997 11.09H11.585C11.9714 11.09 12.3419 10.9369 12.6156 10.6641C12.8893 10.3914 13.0437 10.0213 13.045 9.63499ZM1.76001 9.63499V4.03C1.76 3.90753 1.80828 3.79 1.89441 3.70294C1.98054 3.61588 2.09751 3.56632 2.21997 3.565H11.585C11.7075 3.56632 11.8245 3.61588 11.9106 3.70294C11.9967 3.79 12.045 3.90753 12.045 4.03V9.63C12.045 9.752 11.9965 9.86899 11.9103 9.95526C11.824 10.0415 11.707 10.09 11.585 10.09H2.21997C2.09883 10.09 1.98261 10.0422 1.89648 9.95705C1.81036 9.87186 1.76133 9.75613 1.76001 9.63499ZM13.77 4.905V5.905C13.8947 5.905 14.0142 5.95452 14.1024 6.04267C14.1905 6.13081 14.24 6.25035 14.24 6.375V11.145C14.24 11.4849 14.1053 11.811 13.8654 12.0519C13.6255 12.2927 13.3 12.4287 12.96 12.43H4.435C4.31186 12.4227 4.19577 12.3702 4.10901 12.2826C4.02225 12.1949 3.97098 12.0782 3.96503 11.955H2.96503C2.97142 12.3433 3.12818 12.7141 3.40234 12.9892C3.67651 13.2643 4.04668 13.4223 4.435 13.43H12.97C13.5751 13.4287 14.1551 13.1874 14.5825 12.759C15.01 12.3306 15.25 11.7502 15.25 11.145V6.375C15.25 6.18112 15.2116 5.98914 15.1371 5.81014C15.0626 5.63113 14.9535 5.46864 14.8159 5.332C14.6784 5.19537 14.5151 5.08729 14.3356 5.01401C14.1561 4.94073 13.9639 4.90368 13.77 4.905ZM6.07168 5.57281C6.31835 5.40799 6.60832 5.32001 6.90499 5.32001C7.30281 5.32001 7.68435 5.47805 7.96566 5.75935C8.24696 6.04066 8.40499 6.42218 8.40499 6.82001C8.40499 7.11668 8.31707 7.40669 8.15224 7.65337C7.98742 7.90004 7.75311 8.09229 7.47903 8.20583C7.20494 8.31936 6.90336 8.34908 6.61239 8.2912C6.32142 8.23332 6.05416 8.09046 5.84438 7.88068C5.6346 7.6709 5.49174 7.40363 5.43386 7.11266C5.37598 6.82168 5.40566 6.52008 5.51919 6.24599C5.63272 5.9719 5.825 5.73764 6.07168 5.57281ZM6.48 7.47108C6.60581 7.55514 6.75369 7.60002 6.90499 7.60002C7.10748 7.59871 7.3013 7.51768 7.44448 7.3745C7.58766 7.23131 7.66869 7.03749 7.67 6.83501C7.67 6.6837 7.62516 6.53581 7.5411 6.41C7.45704 6.2842 7.33756 6.18615 7.19778 6.12825C7.05799 6.07035 6.90415 6.0552 6.75576 6.08472C6.60736 6.11423 6.47108 6.1871 6.3641 6.29408C6.25711 6.40107 6.18426 6.53738 6.15475 6.68578C6.12523 6.83417 6.14036 6.98798 6.19826 7.12776C6.25617 7.26755 6.3542 7.38703 6.48 7.47108ZM3.61501 6.17C3.48328 6.16901 3.35424 6.20717 3.24422 6.27964C3.13421 6.3521 3.04819 6.45561 2.99709 6.57703C2.94599 6.69845 2.93208 6.83232 2.95718 6.96164C2.98227 7.09097 3.04522 7.20992 3.13802 7.30342C3.23082 7.39693 3.34928 7.46077 3.47842 7.48684C3.60755 7.5129 3.74156 7.50003 3.86336 7.44985C3.98517 7.39967 4.08933 7.31444 4.16262 7.20497C4.23591 7.09551 4.27504 6.96673 4.27505 6.83499C4.27571 6.7479 4.25909 6.66154 4.22622 6.58089C4.19335 6.50024 4.14481 6.42689 4.08346 6.36507C4.02211 6.30325 3.94914 6.2542 3.86874 6.22072C3.78833 6.18724 3.70211 6.17 3.61501 6.17ZM9.82058 6.28208C9.92994 6.20901 10.0585 6.17 10.19 6.17C10.2775 6.16934 10.3643 6.18609 10.4453 6.21927C10.5263 6.25246 10.5998 6.30142 10.6617 6.3633C10.7236 6.42518 10.7726 6.49875 10.8057 6.57973C10.8389 6.66071 10.8557 6.74748 10.855 6.835C10.855 6.96652 10.816 7.0951 10.7429 7.20446C10.6699 7.31381 10.566 7.39904 10.4445 7.44938C10.323 7.49971 10.1893 7.51289 10.0603 7.48723C9.93127 7.46157 9.81281 7.39823 9.71981 7.30523C9.62681 7.21222 9.56346 7.09374 9.5378 6.96474C9.51214 6.83574 9.52531 6.70204 9.57564 6.58052C9.62598 6.45901 9.71122 6.35515 9.82058 6.28208Z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              fill="currentColor"
+              opacity="1"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <div class="text-sm text-gray-500">총 발송비용</div>
+          <div class="text-2xl font-bold">₩429,400</div>
+        </div>
+      </div>
+    </div>
 
-    <div class="bg-brand_black-200 flex w-max items-center rounded-full p-1">
-      <button
-        id="button1"
-        class="toggle-button h-9 w-[60px] rounded-full bg-white text-black"
-        onclick="toggle(1)"
-      >
-        1일
-      </button>
-      <button
-        id="button2"
-        class="toggle-button h-9 w-[60px] rounded-full text-gray-500"
-        onclick="toggle(2)"
-      >
-        7일
-      </button>
-      <button
-        id="button3"
-        class="toggle-button h-9 w-[60px] rounded-full text-gray-500"
-        onclick="toggle(3)"
-      >
-        30일
-      </button>
+    <div class="container mx-auto p-4">
+      <div class="mb-4 flex items-center justify-between">
+        <div class="text-xl font-bold">
+          캠페인 목록 <span class="text-green-600">전체 22</span>
+          <span class="text-green-600">ON 9</span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <label class="flex items-center">
+            <input type="checkbox" class="mr-2" />
+            ON 캠페인
+          </label>
+          <button class="rounded-md bg-gray-200 px-4 py-2">
+            기본 발송시간 변경
+          </button>
+          <button class="rounded-md bg-green-600 px-4 py-2 text-white">
+            + 캠페인 만들기
+          </button>
+        </div>
+      </div>
+
+      <div class="rounded-md bg-white shadow-md">
+        <div class="flex items-center justify-between border-b p-4">
+          <div class="flex items-center space-x-2">
+            <svg
+              class="h-5 w-5 text-gray-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              ></path>
+            </svg>
+            <span class="font-semibold text-gray-700"
+              >내일 만료되는 쿠폰을 보유한 고객 대상 캠페인</span
+            >
+          </div>
+          <div class="flex items-center space-x-4 text-gray-600">
+            <span>발송수</span>
+            <span>ROAS</span>
+            <span>구매전환율</span>
+            <button class="rounded-md p-2 hover:bg-gray-100">
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 12h12M6 6h12M6 18h12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="flex items-center justify-between border-b p-4">
+          <div class="flex items-center space-x-2">
+            <svg
+              class="h-5 w-5 text-gray-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              ></path>
+            </svg>
+            <span class="font-semibold text-gray-700"
+              >마케팅 수신 미동의한 고객 대상 캠페인</span
+            >
+          </div>
+          <div class="flex items-center space-x-4 text-gray-600">
+            <span>발송수</span>
+            <span>ROAS</span>
+            <span>구매전환율</span>
+            <button class="rounded-md p-2 hover:bg-gray-100">
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 12h12M6 6h12M6 18h12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
